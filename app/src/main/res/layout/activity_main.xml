@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#66ff99"
+    >
+            <!-- 主布局头部，标题导航-->
+            <RelativeLayout
+                android:id="@+id/mainTopRL"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:background="#FFFF7866"
+                android:layout_alignParentTop="true"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="爱平 兄"
+                    android:textSize="25dp"
+                    android:layout_centerInParent="true"
+                    />
+            </RelativeLayout>
+
+
+            <!-- 主布局中部-自定义了FrameLayout，主体-->
+            <MyLayoutAnimation.SlideLayoutAnim
+                android:id="@+id/mainFL"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/mainTopRL"
+                android:layout_above="@+id/mainBottonRL"
+                >
+                    <RelativeLayout
+                        android:id="@+id/FL_RL_main"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <android.support.v4.view.ViewPager
+                            android:id="@+id/mainViewPager"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                        </android.support.v4.view.ViewPager>
+
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:id="@+id/FL_RL_Right"
+                        android:layout_width="90dp"
+                        android:layout_height="match_parent"
+                        android:background="#FFFFA166">
+                            <include android:id="@+id/ce_hua_total_for_4_item" layout="@layout/ce_hua_total_for_4_item"/>
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:id="@+id/FL_RL_Left"
+                        android:layout_width="90dp"
+                        android:layout_height="match_parent"
+                        android:background="#FFFFA166">
+                        <include android:id="@+id/ce_hua_total_for_4_item" layout="@layout/ce_hua_total_for_4_item"/>
+                    </RelativeLayout>
+
+            </MyLayoutAnimation.SlideLayoutAnim>
+
+            <!--&lt;!&ndash;&lt;!&ndash; 左、右、侧滑覆盖样式&ndash;&gt;&ndash;&gt;-->
+            <!--<RelativeLayout-->
+                <!--android:id="@+id/FL_RL_main"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_below="@+id/mainTopRL"-->
+                <!--android:layout_above="@+id/mainBottonRL"-->
+                <!--&gt;-->
+                <!--<android.support.v4.view.ViewPager-->
+                    <!--android:id="@+id/mainViewPager"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="match_parent">-->
+
+                <!--</android.support.v4.view.ViewPager>-->
+
+            <!--</RelativeLayout>-->
+            <!--<android.support.v4.widget.DrawerLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_below="@+id/mainTopRL"-->
+                <!--android:layout_above="@+id/mainBottonRL"-->
+                <!--&gt;-->
+                <!--<RelativeLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="match_parent">-->
+
+                        <!---->
+
+                        <!--<RelativeLayout-->
+                            <!--android:layout_width="120dp"-->
+                            <!--android:layout_height="match_parent"-->
+                            <!--android:layout_gravity="left"-->
+                            <!--android:background="#FFFFED66"-->
+                            <!--&gt;-->
+                            <!--<TextView-->
+                                <!--android:layout_width="wrap_content"-->
+                                <!--android:layout_height="wrap_content"-->
+                                <!--android:text="你好，我是左侧滑。哈哈"-->
+                                <!--android:textSize="30dp"-->
+                                <!--/>-->
+                        <!--</RelativeLayout>-->
+                        <!--<RelativeLayout-->
+                            <!--android:layout_width="120dp"-->
+                            <!--android:layout_height="match_parent"-->
+                            <!--android:layout_gravity="right"-->
+                            <!--android:background="#D6FFA166"-->
+                            <!--&gt;-->
+                            <!--<TextView-->
+                                <!--android:layout_width="wrap_content"-->
+                                <!--android:layout_height="wrap_content"-->
+                                <!--android:text="你好，我是右侧滑。哈哈"-->
+                                <!--android:textSize="30dp"-->
+                                <!--/>-->
+                        <!--</RelativeLayout>-->
+                <!--</RelativeLayout>-->
+            <!--</android.support.v4.widget.DrawerLayout>-->
+
+            <!-- 主布局底部，导航-->
+            <RelativeLayout
+                android:id="@+id/mainBottonRL"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:background="#ff9966"
+                android:layout_alignParentBottom="true"
+
+                >
+                    <RadioGroup
+                        android:id="@+id/radiogroup"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+
+                        >
+                                <RadioButton
+                                android:id="@+id/RBtn1"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:text="首页"
+                                    android:gravity="center"
+                                    android:layout_marginLeft="20dp"
+                                    android:textSize="15dp"
+                                    android:button="@null"
+                                    android:checked="true"
+                                    android:background="@drawable/change_btton1_img"
+                                />
+                                <RadioButton
+                                    android:id="@+id/RBtn2"
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_marginLeft="40dp"
+                                    android:text="预告"
+                                    android:gravity="center"
+                                    android:background="@drawable/change_btton1_img"
+                                    android:button="@null"
+                                    />
+                                <RadioButton
+                                    android:id="@+id/RBtn3"
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_marginLeft="40dp"
+                                    android:text="本地"
+                                    android:gravity="center"
+                                    android:button="@null"
+                                    android:background="@drawable/change_btton1_img"
+                                    />
+                                <RadioButton
+                                    android:id="@+id/RBtn4"
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_marginLeft="40dp"
+                                    android:text="管理"
+                                    android:gravity="center"
+                                    android:button="@null"
+                                    android:background="@drawable/change_btton1_img"
+                                    />
+
+                    </RadioGroup>
+            </RelativeLayout>
+
+</RelativeLayout>

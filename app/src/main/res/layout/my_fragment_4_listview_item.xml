@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:paddingBottom="10dp"
+    android:paddingTop="10dp">
+
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:padding="5dp"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/ic_launcher"/>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginRight="5dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:text="应用名字"
+            android:textColor="#000"
+            android:textSize="16sp"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/downloadSize"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:text="--M/--M"
+                android:textSize="10sp"/>
+
+            <TextView
+                android:id="@+id/netSpeed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:text="---K/s"
+                android:textSize="10sp"/>
+
+            <TextView
+                android:id="@+id/tvProgress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/netSpeed"
+                android:text="--.--%"
+                android:textSize="10sp"/>
+
+        </RelativeLayout>
+
+        <utils.NumberProgressBar
+            android:id="@+id/pbProgress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:progress_reached_bar_height="6dp"
+            app:progress_reached_color="#3498DB"
+            app:progress_text_color="#3498DB"
+            app:progress_text_size="10sp"
+            app:progress_unreached_bar_height="2dp"
+            app:progress_unreached_color="#CCCCCC"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="90dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="3dp"
+        android:paddingRight="3dp"
+        >
+
+        <Button
+            android:id="@+id/start"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#E30"
+            android:text="安装"
+            android:textSize="14dp"
+            android:visibility="gone"
+            android:textColor="#FFF"/>
+
+        <Button
+            android:id="@+id/remove"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFF7866"
+            android:layout_weight="1"
+            android:text="删除"
+            android:textSize="14dp"
+            android:textColor="#FFF"/>
+
+        <Button
+            android:id="@+id/restart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFABEE00"
+            android:layout_weight="1"
+            android:textSize="14dp"
+            android:layout_marginTop="5dp"
+            android:text="重新\n下载"
+            android:singleLine="true"
+            android:textColor="#FFF"/>
+    </LinearLayout>
+
+</LinearLayout>

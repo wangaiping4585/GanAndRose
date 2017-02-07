@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     android:layout_width="match_parent"
+    android:layout_height="600dp"
+    android:background="#66ff99"
+    >
+        <RelativeLayout
+            android:id="@+id/biaoti"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="#66ff99"
+            >
+            <ImageView
+                android:id="@+id/rentou"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/huihui"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                />
+                <TextView
+                    android:id="@+id/txtXingMing"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="黄鹤不是人"
+                    android:layout_toRightOf="@+id/rentou"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="16dp"
+                    />
+                <TextView
+                    android:id="@+id/shijian"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2016-09-09"
+                    android:layout_toRightOf="@+id/rentou"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="12dp"
+                    />
+
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/shiping"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:background="#66ff99"
+            android:layout_below="@+id/biaoti"
+            >
+                <TextView
+                    android:id="@+id/geyan"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:text="没有美颜，就没有伤害"
+                    android:textSize="16dp"
+                    android:layout_centerHorizontal="true"
+                    />
+
+                        <ImageView
+                            android:id="@+id/zhuTuPian"
+                            android:layout_below="@+id/geyan"
+                            android:layout_width="320dp"
+                            android:layout_height="200dp"
+                            android:src="@drawable/mao"
+                            android:layout_centerHorizontal="true"
+                            android:scaleType="centerCrop"
+                            />
+        </RelativeLayout>
+
+
+</RelativeLayout>
